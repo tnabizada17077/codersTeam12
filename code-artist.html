@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- 
+    SITE 1101 Principles of Information Systems 
+    (c)2024 by Ali Alizada, Fazil Hasanli, Toghrul Nabizada, Daniz Zeynalova
+    Submitted in partial fulfillment of the requirements of the course.
+-->
+<html>
+    <head>
+        <title>Creative Coding with Code Artists</title>
+        <link rel="stylesheet" href="styles.css">  
+        <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" type="image/x-icon" href="/media/coders.ico">
+        <script type="text/javascript" src="scripts.js"></script>      
+        <meta name='viewport' content='width=device-width, initial-scale=1'> 
+        <meta charset="UTF-8">  
+    </head>
+    <header class="header">
+      <nav class="nav-bar">
+        <a href="index.html">Main</a>
+        <a href="team-members.html">About Team Members</a>
+        <a href="hour-of-code.html">Hour Of Code</a>
+        <a href="web-project.html">Our Website Project</a>
+        <a href="code-artist.html">Code artist</a>
+      </nav>
+    </header>
+    <body>
+        <div style="text-align:center">
+            <canvas id="art-canvas" width="640" height="480">
+                Sorry ... your browser doesn't support the HTML5 canvas element.
+            </canvas>        
+        </div>
+        <div class="codeArt">
+            <h2>Code artist page</h2>
+            <p>
+                
+            </p>
+        </div>
+        <footer class="footer">
+            <img src="media/ada_logo_white.png" alt="ADA Logo" class="adaLogo">
+            <img src="media/Coders.ico" alt="Coders Logo" class="teamLogo" id="roundLogo">
+            <h3 class="headFoot" style="color: rgb(255, 255, 255); transform: translate(-270px, 0px);">Copyright © 2024 ADA SITE TEAM 12. All rights reserved.</h3>
+        </footer>          
+
+        <script type="text/javascript">
+            // Get reference to the 2D context of the canvas
+            let canvas = document.getElementById("art-canvas");
+            let context = canvas.getContext("2d");
+            // Set the color for drawing lines using red, green and blue components
+            // context.strokeStyle = 'rgb(255, 0, 0)';
+            context.strokeStyle = `rgb(${255 * Math.random()}, ${255 * Math.random()}, ${255 * Math.random()})`;
+            DrawSpiral(context);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- 
+    SITE 1101 Principles of Information Systems 
+    (c)2024 by Ali Alizada, Fazil Hasanli, Toghrul Nabizada, Daniz Zeynalova
+    Submitted in partial fulfillment of the requirements of the course.
+-->
+<html>
+    <head>
+        <title>Meet the Team</title>
+        <link rel="stylesheet" href="styles.css">  
+        <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" type="image/x-icon" href="/media/coders.ico">
+        <script type="text/javascript" src="scripts.js"></script>      
+        <meta name='viewport' content='width=device-width, initial-scale=1'> 
+        <meta charset="UTF-8">  
+    </head>
+    <header class="header">
+        <nav class="nav-bar"> 
+            <a href="index.html">Main</a>
+            <a href="team-members.html">About Team Members</a>
+            <a href="hour-of-code.html">Hour Of Code</a>
+            <a href="web-project.html">Our Website Project</a>
+            <a href="code-artist.html">Code artist</a>
+        </nav>
+    </header>
+    <body>
+      <div class="aboutTeamTitle">
+       <h1 class='aboutusTeamcodersTitle'>About Us</h1>
+       <h2 class='aboutusTeamcodersTitle'>Team Coders</h2>
+      </div>
+        <div id="aboutTeam" class="aboutUs">
+            <h1 class='aboutusTeamcodersTitle'>About Us</h1>
+            <h2 class='aboutusTeamcodersTitle'>Team Coders</h2>
+              <div id="fazil"><h3>Fazil Hasanli</h3>
+                <img src="media/fazil.jpg" alt="fazil photo" class="FazilProfile">
+                <p class="memberParagraphs">Hello, I am Fazil Hasanli, a second-year student at ADA University studying at Bachelor of Science in Computer Science (BSCS). 
+                   With a growing interest in cybersecurity, my goal is to build a career in this field.</p>
+              </div>
+              <div id="ali"><h3>Ali Alizada</h3>
+                <img src="media\ali.jpg" alt="ali photo" class="AliProfile">
+                <p>Hello, My name is Ali Alizada, and I study at ADA University. I enjoy working on projects with my team 
+                   and learning new things about coding, engineering and science. In my free time, 
+                   I play chess, video games and football. I'm always looking for ways to improve and achieve 
+                   my goals. And I believe that i will succeed in future.</p>
+              </div>
+              <div id="toghrul"><h3>Toghrul Nabizada</h3>
+                <img src="media/toghrul.jpg" alt="toghrul photo" class="ToghrulProfile">
+                <p class="memberParagraphs">Hello! I am Toghrul Nabizada. I am a student at the ADA University and 
+                   study at Bachelor of Sciences at Electrical & Electronics Engineering.
+                   Currently I am a first course Undergraduate
+                   student. <br>I am a huge fan of football. I also enjoy coding and learning new technologies. 
+                   In my free time, I follow football matches and play with friends. 
+                   My <br> goal is to become a skilled Electrical engineer and create something innovative in future. Hope 
+                   I will succeed. Thanks!
+                </p></div>
+              <div id="daniz"><h3>Daniz Zeynalova</h3>
+                <img src="media/Deniz 1.jpg" alt="daniz photo" class="DanizProfile">
+                <p class="memberParagraphs">Hello, my name is Deniz Zeynalova. I'm a Computer Science student. I study at
+                     ADA university, and it is my 3rd year. My hobbies are playing piano, drawing and playing computer games.
+                    My goal is to create something new in my field and to make our world a better place.</p></div>
+        </div>
+        <footer class="footer">
+            <img src="media/ada_logo_white.png" alt="ADA Logo" class="adaLogo">
+            <img src="media/Coders.ico" alt="Coders Logo" class="teamLogo" id="roundLogo">
+            <h3 class="headFoot" style="color: rgb(255, 255, 255); transform: translate(-270px, 0px);">Copyright © 2024 ADA SITE TEAM 12. All rights reserved.</h3>
+        </footer>
+        <script>
+            var currentHash = window.location.hash.substring(1);
+            var allSections = document.querySelectorAll('#aboutTeam div');
+
+            for (var i=0;i<allSections.length;i++){
+                allSections[i].style.display='none';
+            }
+
+            if (currentHash){
+                var targetSection = document.getElementById(currentHash);
+                if (targetSection) {
+                    targetSection.style.display = "block";
+                }
+            }else {
+                for (var i = 0; i < allSections.length; i++) {
+                    allSections[i].style.display = "block";
+                }
+            }
+        </script>
+    </body>
+</html>
